@@ -16,7 +16,7 @@
 </section> -->
 
 
-<!-- gallery 1 -->
+<!-- gallery 3 -->
 <div class="grid grid-cols-5 gap-4">
         <div>
             <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px; margin: 10px;" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <!-- gallery 2-->
+    <!-- gallery 4-->
 <div class="grid grid-cols-5 gap-4">
         <div>
             <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px; margin: 10px;" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
