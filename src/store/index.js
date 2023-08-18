@@ -1,18 +1,16 @@
 import { createStore } from "vuex";
-import product from "./modules/product";
-import kategori from "./modules/kategori";
 import auth from "./modules/auth";
-import surah from "./modules/surah";
+import product from "./modules/product";
+
 
 const store = createStore({
   state: {
     isLoading: false,
   },
   modules: {
-    product,
-    kategori,
     auth,
-    surah,
+    product,
+ 
   },
 });
 

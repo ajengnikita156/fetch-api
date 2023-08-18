@@ -1,38 +1,84 @@
 <template>
-    <center><h2><b>HOME PAGE</b></h2></center>
-    <div class="bg-white">
-        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-
-            <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 pt-2">
-                <div v-for="product in getProducts" :key="product.id">
-                    <router-link :to="{ name: 'SingleProduct', params: { id: product.id } }" class="group">
-                        <div
-                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-black-300 xl:aspect-h-8 xl:aspect-w-7">
-                            <center><img :src="product.image" style="width: 100px; height: 100px;"
-                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-                                class="h-full w-full object-cover object-center group-hover:opacity-75"></center>
-                        </div>
-                        <h3 class="mt-4 text-sm text-black-700">{{ product.title }}</h3>
-                        
-                    </router-link>
-                </div>
-            </div>
+<div>
+    <div class="grid gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src='../components/img/banner1.jpeg'  alt="">
+    </div>
+    </div>
+<!-- <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+           
         </div>
     </div>
-    
-</template>
-<script>
-import { mapGetters, mapActions } from 'vuex';
+</section> -->
 
-export default {
-    computed: {
-        ...mapGetters('product', ['getProducts']),
-    },
-    methods: {
-        ...mapActions('product', ['fetchProducts']),
-    },
-    created() {
-        this.fetchProducts();
-    },
-}
-</script>
+
+<!-- gallery 1 -->
+<div class="grid grid-cols-5 gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px; margin: 10px;" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- gallery 2-->
+<div class="grid grid-cols-5 gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px; margin: 10px;" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" style="width: 200px; height: 200px;" src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" alt="">
+        </div>
+    </div>
+
+<!-- footer -->
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Style.mu</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="/contact" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Style.mu</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+</div>
+</template>

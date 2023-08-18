@@ -1,22 +1,32 @@
 import { createWebHistory, createRouter } from "vue-router";
+import Login from "../views/Login.vue"
 import Home from "../views/Home.vue";
+import Register from "../views/Register.vue";
 import Product from "../views/Product.vue";
 import SingleProduct from "../views/SingleProduct.vue";
-import Kategori from "../views/Kategori.vue";
-
-import Login from "../views/Login.vue";
-import store from "../store/index";
-import Surah from "../views/Surah.vue";
-import SingleSurah from "../views/SingleSurah.vue";
-
+import Cart from "../views/Cart.vue";
+import Checksatu from "../views/Checksatu.vue";
+import Checkout from "../views/Checkout.vue";
+import Contact from "../views/Contact.vue";
 
 
 
 const routes = [
   {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    meta: { requiresGuest: true },
+  },
+  {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
   },
   {
     path: "/product",
@@ -29,42 +39,31 @@ const routes = [
     component: SingleProduct,
   },
   {
-    path: "/kategori/",
-    name: "Kategori",
-    component: Kategori,
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
   },
   {
-    path: "/login",
-    name: "Login",
-    component: Login,
-    meta: { requiresGuest: true },
+    path: "/pembayaran",
+    name: "Checksatu",
+    component: Checksatu,
   },
   {
-    path: "/surah",
-    name: "Surah",
-    component: Surah,
+    path: "/checkout",
+    name: "Checkout",
+    component: Checkout,
   },
   {
-    path: "/surah/:number",
-    name: "SingleSurah",
-    component: SingleSurah,
-    props: true,
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
   },
- 
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
   
-});
-
-router.beforeEach((to, from, next) => {
-  if (to.meta.requiresGuest && store.getters["auth/isAuthenticated"]) {
-    next("/"); // Redirect to Home
-  } else {
-    next();
-  }
 });
 
 export default router;

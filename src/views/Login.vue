@@ -85,7 +85,7 @@
 
                     <p class="mb-4 text-center">
                         New on login?
-                        <a href="#" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500"> Create an
+                        <a href="/register" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500"> Create an
                             account </a>
                     </p>
                 </div>
